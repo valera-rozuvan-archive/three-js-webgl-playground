@@ -1,11 +1,13 @@
 import { Application } from './application';
 
-import * as THREE from 'three';
+import {
+  BoxGeometry, Mesh, MeshBasicMaterial, PerspectiveCamera, Scene, WebGLRenderer
+} from 'three';
 
 class Game {
-  public scene: THREE.Scene;
-  public camera: THREE.PerspectiveCamera;
-  public renderer: THREE.WebGLRenderer;
+  public scene: Scene;
+  public camera: PerspectiveCamera;
+  public renderer: WebGLRenderer;
 
   private cube: THREE.Mesh = null;
 
@@ -19,10 +21,10 @@ class Game {
   }
 
   private init(): void {
-    const geometry = new THREE.BoxGeometry(1, 1, 1);
-    const material = new THREE.MeshBasicMaterial({ color: 0xff0000 });
+    const geometry = new BoxGeometry(1, 1, 1);
+    const material = new MeshBasicMaterial({ color: 0xff0000 });
 
-    this.cube = new THREE.Mesh(geometry, material);
+    this.cube = new Mesh(geometry, material);
 
     this.scene.add(this.cube);
 

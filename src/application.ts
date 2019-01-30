@@ -1,11 +1,11 @@
-import * as THREE from 'three';
+import { PerspectiveCamera, Scene, WebGLRenderer } from 'three';
 
 const windowInnerHeightCorrection = 4;
 
 class Application {
-  public scene: THREE.Scene = null;
-  public camera: THREE.PerspectiveCamera = null;
-  public renderer: THREE.WebGLRenderer = null;
+  public scene: Scene = null;
+  public camera: PerspectiveCamera = null;
+  public renderer: WebGLRenderer = null;
 
   private onReadyCallback: () => void = null;
 
@@ -31,11 +31,11 @@ class Application {
   }
 
   private init(): void {
-    this.scene = new THREE.Scene();
-    this.camera = new THREE.PerspectiveCamera(
+    this.scene = new Scene();
+    this.camera = new PerspectiveCamera(
       25, window.innerWidth / (window.innerHeight - windowInnerHeightCorrection)
     );
-    this.renderer = new THREE.WebGLRenderer({ antialias: true });
+    this.renderer = new WebGLRenderer({ antialias: true });
 
     this.renderer.setSize(window.innerWidth, window.innerHeight - windowInnerHeightCorrection);
     this.renderer.domElement.id = 'three-js-renderer';
