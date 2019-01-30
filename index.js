@@ -47114,11 +47114,11 @@ exports.Game = Game;
 
 Object.defineProperty(exports, "__esModule", { value: true });
 __webpack_require__(/*! ./styles/main.scss */ "./src/styles/main.scss");
-var application_ts_1 = __webpack_require__(/*! ./application.ts */ "./src/application.ts");
-var game_ts_1 = __webpack_require__(/*! ./game.ts */ "./src/game.ts");
-var app = new application_ts_1.Application();
+var application_1 = __webpack_require__(/*! ./application */ "./src/application.ts");
+var game_1 = __webpack_require__(/*! ./game */ "./src/game.ts");
+var app = new application_1.Application();
 app.onRendererReady(function () {
-    var game = new game_ts_1.Game(app);
+    var game = new game_1.Game(app);
 });
 
 
