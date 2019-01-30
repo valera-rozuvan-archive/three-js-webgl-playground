@@ -29,6 +29,16 @@ npm run build
 
 This will produce a `./dist` folder with `html`, `js`, and `css` files.
 
+## Production mode
+
+To build the application for production environment, we need to disable source maps and also minify
+the static files. The following commands are available:
+
+```
+npm run start-prod
+npm run build-prod
+```
+
 ## License
 
 Licensed under the MIT license. See [LICENSE](LICENSE) file for more details.
