@@ -1,7 +1,7 @@
 import './styles/main.scss';
 
-import { Application } from './application.ts';
-import { Game } from './game.ts';
+import { Application } from './application';
+import { Game } from './game';
 
 const app = new Application();
 

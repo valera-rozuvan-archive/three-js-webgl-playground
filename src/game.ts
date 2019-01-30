@@ -1,4 +1,4 @@
-import { Application } from './application.ts';
+import { Application } from './application';
 
 import * as THREE from 'three';
 
